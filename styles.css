@@ -7,6 +7,12 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  height: 300px;
   width: 400px;
+  height: auto;
+  
+}
+
+.grid img {
+  width: 200px;
+  height: 100%;
 }
