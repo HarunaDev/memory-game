@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // card-image options
+  // Iterables (card-image options)
   const cardArray = [
     {
       name: "green hills",
@@ -38,16 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".grid");
 
 // create game board
-
 function createBoard() {
-  for(let i = 0; i < cardArray.length; i++) {
-    let card = document.createElement("img")
-    card.setAttribute("src", "img/blank.png")
-    card.setAttribute("data-id", 1)
-    grid.appendChild(card)
-  }
-}
+  /* loop over the array and return an img element with the following attributes*/
+  cardArray.forEach(function(cards) {
+    cards = document.createElement("img")
+    cards.setAttribute("src", "img/blank.png")
+    cards.setAttribute("data-id", 1)
+    grid.appendChild(cards)
+  });
+};
 
-createBoard()
-})
+createBoard();
+
+});
 
