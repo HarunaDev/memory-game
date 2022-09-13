@@ -76,6 +76,10 @@ function checkForMatch() {
     cards[optionOneId].setAttribute("src", "img/blank.png")
     cards[optionTwoId].setAttribute("src", "img/blank.png")
     cardsWon.push(cardsChosen)
+  } else {
+    cards[optionOneId].setAttribute('src', 'images/blank.png')
+    cards[optionTwoId].setAttribute('src', 'images/blank.png')
+    alert('Sorry, try again')
   }
 }
 
