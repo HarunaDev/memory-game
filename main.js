@@ -64,6 +64,15 @@ function createBoard() {
 };
 
 
+// check for matches
+function checkForMatch() {
+  // select values from cardsChosen array
+  const cards = document.querySelectorAll('img')
+  const optionOneId = cardsChosenId[0]
+  const optionTwoId = cardsChosenId[1]
+}
+
+
 //flip card function
 function flipCard() {
   let cardId = this.getAttribute('data-id')
