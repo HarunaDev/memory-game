@@ -35,18 +35,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
+  
+
   const grid = document.querySelector(".grid");
+  
 
 // create game board
 function createBoard() {
   /* loop over the array and return an img element with the following attributes*/
+
+  /* previous code
   cardArray.forEach(function(cards) {
     cards = document.createElement("img")
     cards.setAttribute("src", "img/blank.png")
-    cards.setAttribute("data-id", 1)
+    cards.setAttribute("data-id", issue)
+    cards.addEventListener("click", flipCard)
     grid.appendChild(cards)
-  });
+  }); */
+
+  for(let i = 0; i < cardArray.length; i++) {
+    const card = document.createElement("img")
+    card.setAttribute("src", "img/blank.png")
+    card.setAttribute("data-id", i)
+    card.addEventListener("click", flipCard)
+    grid.appendChild(card)
+  }
 };
+
+
 
 createBoard();
 
