@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  
-
   const grid = document.querySelector(".grid");
   let cardsChosen = []
+  let cardsChosenId = []
+  let cardsWon = []
   
 
 // create game board
@@ -67,9 +67,16 @@ function createBoard() {
 // check for matches
 function checkForMatch() {
   // select values from cardsChosen array
-  const cards = document.querySelectorAll('img')
+  const cards = document.querySelectorAll("img")
   const optionOneId = cardsChosenId[0]
   const optionTwoId = cardsChosenId[1]
+
+  // check if cards match or not
+  if(optionOneId == optionTwoId) {
+    cards[optionOneId].setAttribute("src", "img/blank.png")
+    cards[optionTwoId].setAttribute("src", "img/blank.png")
+    cardsWon.push(cardsChosen)
+  }
 }
 
 
